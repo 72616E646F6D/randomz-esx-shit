@@ -18,7 +18,7 @@ Citizen.CreateThread(function()
         local group = xTarget.getGroup()
 
         if group == 'admin' or group == 'superadmin' or group == 'moderator' then
-          TriggerClientEvent('chat:addMessage', -1, {
+          xTarget.triggerEvent('chat:addMessage', {
             template = '<div class="chat-message advert">SYSTEM :: There\'s currently ' .. count .. ' open tickets. ( /tickets )</div>',
             args = {}
           })
